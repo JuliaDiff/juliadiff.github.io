@@ -266,4 +266,8 @@
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
 
-
+/* #Added by Iain
+================================================== */
+ pre { overflow: auto; }
+ code { background: #eeeeee; font-family: Monaco, "Courier New", monospace; }
+ .highlight { margin-bottom: 20px !important; }
