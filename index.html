@@ -70,19 +70,29 @@
         <h2> What is JuliaDiff? </h2>
         <p> JuliaDiff is an informal organization which aims to unify and document packages written in <a href="http://julialang.org">Julia</a> for evaluating derivatives. The technical features of Julia, namely, multiple dispatch, source code via reflection, JIT compilation, and first-class access to expression parsing make implementing and using techniques from automatic differentiation easier than ever before (in our biased opinion). Packages hosted under the JuliaDiff organization follow the same guidelines as for <a href="http://juliaopt.org/">JuliaOpt</a>; namely, they should be actively maintained, well documented and have a basic testing suite.</p>
 
-        <h3>Related packages</h3>
-
-        <p>Below we list related packages and their testing status on the latest Julia release.</p>
+        <h3>Included packages</h3>
+        <p>Below we list the packages that are currently included in the JuliaDiff organization and their testing status on the latest Julia release.</p>
 
         <ul>
-            <li><strong>DualNumbers</strong> <a href="http://iainnz.github.io/packages.julialang.org/?pkg=DualNumbers&amp;ver=0.2"> <img src="http://iainnz.github.io/packages.julialang.org/badges/DualNumbers_0.2.svg" alt="Release testing status"></a> - Implements a <code>Dual</code> number type which can be used for forward-mode automatic differentiation of first derivatives via operator overloading. (<a href="https://github.com/scidom/DualNumbers.jl">GitHub</a>) </li>
-            <li><strong>HyperDualNumbers</strong> <small>(requires Julia prerelease)</small> <!-- <a href="http://iainnz.github.io/packages.julialang.org/?pkg=HyperDualNumbers&amp;ver=0.2"> <img src="http://iainnz.github.io/packages.julialang.org/badges/HyperDualNumbers_0.2.svg" alt="Release testing status"> </a>--> - Implements a <code>Hyper</code> number type which can be used for forward-mode automatic differentiation of first and second derivatives via operator overloading. (<a href="https://github.com/goedman/HyperDualNumbers.jl">GitHub</a>) </li>
-            <li><strong>PowerSeries</strong> <a href="http://iainnz.github.io/packages.julialang.org/?pkg=PowerSeries&amp;ver=0.2"> <img src="http://iainnz.github.io/packages.julialang.org/badges/PowerSeries_0.2.svg" alt="Release testing status"></a> - Implements truncated power series type which can be used for forward-mode automatic differentiation of arbitrary order derivatives via operator overloading. (<a href="https://github.com/jwmerrill/PowerSeries.jl">GitHub</a>) </li>
-            <li><strong>ForwardDiff</strong> <a href="http://iainnz.github.io/packages.julialang.org/?pkg=ForwardDiff&amp;ver=0.2">  <img src="http://iainnz.github.io/packages.julialang.org/badges/ForwardDiff_0.2.svg" alt="Release testing status"></a> - A unified package for forward-mode automatic differentiation, combining both DualNumbers and vector-based gradient accumulations. (<a href="https://github.com/scidom/ForwardDiff.jl">GitHub</a>) </li>
-            <li><strong>ReverseDiffSparse</strong> <a href="http://iainnz.github.io/packages.julialang.org/?pkg=ReverseDiffSparse&amp;ver=0.2">  <img src="http://iainnz.github.io/packages.julialang.org/badges/ReverseDiffSparse_0.2.svg" alt="Release testing status"></a> - Implements reverse-mode automatic differentiation for gradients and sparse Hessian matrices given closed-form expressions. (<a href="https://github.com/mlubin/ReverseDiffSparse.jl">GitHub</a>)</li>
-            <li><strong>ReverseDiffSource</strong> <a href="http://iainnz.github.io/packages.julialang.org/?pkg=ReverseDiffSource&amp;ver=0.2">  <img src="http://iainnz.github.io/packages.julialang.org/badges/ReverseDiffSource_0.2.svg" alt="Release testing status"></a> - Implements reverse-mode automatic differentiation for gradients based on more complex expression graphs (including intermediate assignments). (<a href="https://github.com/fredo-dedup/ReverseDiffSource.jl">GitHub</a>)</li>
-            <li><strong>ReverseDiffOverload</strong> <small>(requires Julia prerelease)</small><!-- <a href="http://iainnz.github.io/packages.julialang.org/?pkg=ReverseDiffOverload&amp;ver=0.2">  <img src="http://iainnz.github.io/packages.julialang.org/badges/ReverseDiffOverload_0.2.svg" alt="Release testing status"></a>--> - Implements reverse-mode automatic differentiation by overloading function inputs to extract scalar and vector-valued expression graphs. (<a href="https://github.com/LaurcenceA/ReverseDiffOverload.jl">GitHub</a>)</li>
-            <li><strong>Calculus</strong> <a href="http://iainnz.github.io/packages.julialang.org/?pkg=Calculus&amp;ver=0.2">  <img src="http://iainnz.github.io/packages.julialang.org/badges/Calculus_0.2.svg" alt="Release testing status"></a> - Provides methods for symbolic differentiation and finite-difference approximations. (<a href="https://github.com/johnmyleswhite/Calculus.jl">GitHub</a>)</li>
+
+            <li><strong>DualNumbers</strong> <a href="http://pkg.julialang.org/?pkg=DualNumbers&amp;ver=0.2"> <img src="http://pkg.julialang.org/badges/DualNumbers_0.2.svg" alt="Release testing status"></a> - Implements a <code>Dual</code> number type which can be used for forward-mode automatic differentiation of first derivatives via operator overloading. (<a href="https://github.com/JuliaDiff/DualNumbers.jl">GitHub</a>) </li>
+
+            <li><strong>HyperDualNumbers</strong> <small>(requires Julia prerelease)</small> <!-- <a href="http://iainnz.github.io/packages.julialang.org/?pkg=HyperDualNumbers&amp;ver=0.2"> <img src="http://iainnz.github.io/packages.julialang.org/badges/HyperDualNumbers_0.2.svg" alt="Release testing status"> </a>--> - Implements a <code>Hyper</code> number type which can be used for forward-mode automatic differentiation of first and second derivatives via operator overloading. (<a href="https://github.com/JuliaDiff/HyperDualNumbers.jl">GitHub</a>) </li>
+
+            <li><strong>ForwardDiff</strong> <small>(requires Julia prerelease)</small> <!-- <a href="http://iainnz.github.io/packages.julialang.org/?pkg=ForwardDiff&amp;ver=0.2">  <img src="http://iainnz.github.io/packages.julialang.org/badges/ForwardDiff_0.2.svg" alt="Release testing status"></a>--> - A unified package for forward-mode automatic differentiation, combining both DualNumbers and vector-based gradient accumulations. (<a href="https://github.com/JuliaDiff/ForwardDiff.jl">GitHub</a>) </li>
+
+        </ul>
+        
+        <h3>Related packages</h3>
+
+        <p>These Julia packages also provide differentiation functionalities.</p>
+
+        <ul>
+            <li><strong>PowerSeries</strong> - Implements truncated power series type which can be used for forward-mode automatic differentiation of arbitrary order derivatives via operator overloading. (<a href="https://github.com/jwmerrill/PowerSeries.jl">GitHub</a>) </li>
+            <li><strong>ReverseDiffSparse</strong> - Implements reverse-mode automatic differentiation for gradients and sparse Hessian matrices given closed-form expressions. (<a href="https://github.com/mlubin/ReverseDiffSparse.jl">GitHub</a>)</li>
+            <li><strong>ReverseDiffSource</strong> - Implements reverse-mode automatic differentiation for gradients based on more complex expression graphs (including intermediate assignments). (<a href="https://github.com/fredo-dedup/ReverseDiffSource.jl">GitHub</a>)</li>
+            <li><strong>ReverseDiffOverload</strong> - Implements reverse-mode automatic differentiation by overloading function inputs to extract scalar and vector-valued expression graphs. (<a href="https://github.com/LaurcenceA/ReverseDiffOverload.jl">GitHub</a>)</li>
+            <li><strong>Calculus</strong> - Provides methods for symbolic differentiation and finite-difference approximations. (<a href="https://github.com/johnmyleswhite/Calculus.jl">GitHub</a>)</li>
 
 
         </ul>
