@@ -196,7 +196,7 @@
     <ul>
         <li><a href="https://github.com/JuliaOpt/Optim.jl">Optim</a> and <a href="https://github.com/EconForge/NLsolve.jl">NLSolve</a> use <strong>DualNumbers</strong> to compute exact gradients and Jacobians of user-provided functions. Just set <code>autodiff=true</code>. The function must be written to take a generic input vector, e.g., <code>f{T}(x::Vector{T})</code> or just <code>f(x)</code> instead of <code>f(x::Vector{Float64})</code>.</li>
         <li><a href="https://github.com/JuliaOpt/JuMP.jl">JuMP</a> uses <strong>ReverseDiffSparse</strong> to compute gradients and sparse Hessians, providing them to efficient interior-point solvers.</li>
-        <li><a href="https://github.com/JuliaStats/MCMC.jl">MCMC</a> uses <strong>ReverseDiffSource</strong> to compute gradients of statistical models.</li>
+        <li><a href="https://github.com/JuliaStats/Lora.jl">Lora</a>, an MCMC engine, uses <strong>ReverseDiffSource</strong> to compute gradients of statistical models.</li>
     </ul>
 
     <h2>Links</h2>
