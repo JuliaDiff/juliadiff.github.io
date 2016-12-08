@@ -44,7 +44,7 @@
 	================================================== -->
 
 	<div class="container">
-		
+
 <!-- Header -->
     <div class="sixteen columns">
       <h1 class="remove-bottom" style="margin-top: 40px; color: #ad3f39;">JuliaDiff</h1>
@@ -61,7 +61,7 @@
 
         <p> Derivatives are required at the core of many numerical algorithms. Unfortunately, they are usually computed <em>inefficiently</em> and <em>approximately</em> by some variant of the finite difference approach
         $$ f'(x) \approx \frac{f(x+h) - f(x)}{h}, h \text{ small }. $$
-        This method is <em>inefficient</em> because it requires \( \Omega(n) \) evaluations of \( f : \mathbb{R}^n \to \mathbb{R} \) to compute the gradient \( \nabla f(x) = \left( \frac{\partial f}{\partial x_1}(x), \cdots, \frac{\partial f}{\partial x_n}(x)\right) \), for example. It is <em>approximate</em> because we have to choose some finite, small value of the step length \( h \), balancing floating-point precision with mathematical approximation error. 
+        This method is <em>inefficient</em> because it requires \( \Omega(n) \) evaluations of \( f : \mathbb{R}^n \to \mathbb{R} \) to compute the gradient \( \nabla f(x) = \left( \frac{\partial f}{\partial x_1}(x), \cdots, \frac{\partial f}{\partial x_n}(x)\right) \), for example. It is <em>approximate</em> because we have to choose some finite, small value of the step length \( h \), balancing floating-point precision with mathematical approximation error.
         </p>
 
         <h4>What can we do instead?</h4>
@@ -73,7 +73,56 @@
         <h3>Included packages</h3>
         <p>Below we list the packages that are currently included in the JuliaDiff organization and their testing status on the latest Julia release, if available.</p>
 
-        <table style="display: block; margin-left: 5%; margin-right: 5%; width: 90%;">
+	<table style="display: block; margin-left: 5%; margin-right: 5%; width: 90%;">
+		<tr>
+		  <td style="padding: 10px 10px">
+			<a href="https://github.com/JuliaDiff/ForwardDiff.jl"><strong>ForwardDiff</strong></a><br>
+			<a href="http://pkg.julialang.org/?pkg=ForwardDiff&ver=0.5">
+			  <img src="http://pkg.julialang.org/badges/ForwardDiff_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
+			</a>
+		  </td>
+		  <td>
+			ForwardDiff provides user-friendly methods for performing forward-mode automatic differentiation on native Julia code. ForwardDiff offers several advanced features, such as nested differentiation, a non-allocating API, and a SIMD-vectorizable multidimensional dual number type.
+		  </td>
+		</tr>
+
+		<tr>
+		  <td style="padding: 10px 10px">
+			<a href="https://github.com/JuliaDiff/ReverseDiff.jl"><strong>ReverseDiff</strong></a><br>
+			<a href="http://pkg.julialang.org/?pkg=ReverseDiff&ver=0.5">
+			  <img src="http://pkg.julialang.org/badges/ReverseDiff_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
+			</a>
+		  </td>
+		  <td>
+			ReverseDiff provides user-friendly methods for performing reverse-mode automatic differentiation on native Julia code. ReverseDiff implements many linear algebra optimizations, flexible performance annotations, and composes well with ForwardDiff (enabling mixed-mode AD).
+		  </td>
+		</tr>
+
+		<tr>
+		  <td style="padding: 10px 10px">
+			<a href="https://github.com/JuliaDiff/ReverseDiffSource.jl"><strong>ReverseDiffSource</strong></a><br>
+			<a href="http://pkg.julialang.org/?pkg=ReverseDiffSource&ver=0.5">
+			  <img src="http://pkg.julialang.org/badges/ReverseDiffSource_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
+			</a>
+		  </td>
+		  <td>
+			ReverseDiffSource implements source-to-source reverse-mode automatic differentiation for native Julia functions and expressions. ReverseDiffSource supports gradients and higher-order derivatives, and accepts a subset of valid Julia syntax, including intermediate assignments.
+		  </td>
+		</tr>
+
+		<tr>
+		  <td style="padding: 10px 10px">
+			<a href="https://github.com/lbenet/TaylorSeries.jl"><strong>TaylorSeries</strong></a><br>
+			<a href="http://pkg.julialang.org/?pkg=TaylorSeries&ver=0.5">
+			  <img src="http://pkg.julialang.org/badges/TaylorSeries_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
+			</a>
+		  </td>
+		  <td>
+			TaylorSeries implements truncated multivariate power series for high-order integration of ODEs and forward-mode automatic differentiation of arbitrary order derivatives via operator overloading.
+		  </td>
+		</tr>
+
+
           <tr>
             <td style="padding: 10px 10px">
               <a href="https://github.com/JuliaDiff/DualNumbers.jl"><strong>DualNumbers</strong></a><br>
@@ -82,19 +131,7 @@
               </a>
             </td>
             <td>
-              Implements a <code>Dual</code> number type which can be used for forward-mode automatic differentiation of first derivatives via operator overloading.
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding: 10px 10px">
-              <a href="https://github.com/JuliaDiff/ForwardDiff.jl"><strong>ForwardDiff</strong></a><br>
-              <a href="http://pkg.julialang.org/?pkg=ForwardDiff&ver=0.5">
-                <img src="http://pkg.julialang.org/badges/ForwardDiff_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
-              </a>
-            </td>
-            <td>
-              A unified package for forward-mode automatic differentiation, combining both DualNumbers and vector-based gradient accumulations.
+             DualNumbers provides a dual number type which can be used to take first-order scalar derivatives of native Julia code.
             </td>
           </tr>
 
@@ -106,35 +143,11 @@
               </a>
             </td>
             <td>
-              Implements a <code>Hyper</code> number type which can be used for forward-mode automatic differentiation of first and second derivatives via operator overloading.
+             HyperDualNumbers provides a hyper-dual number type which can be used to take first-order and second-order scalar derivatives of native Julia code.
             </td>
           </tr>
+	  </table>
 
-          <tr>
-            <td style="padding: 10px 10px">
-              <a href="https://github.com/JuliaDiff/ReverseDiffSource.jl"><strong>ReverseDiffSource</strong></a><br>
-              <a href="http://pkg.julialang.org/?pkg=ReverseDiffSource&ver=0.5">
-                <img src="http://pkg.julialang.org/badges/ReverseDiffSource_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
-              </a>
-            </td>
-            <td>
-              Implements reverse-mode automatic differentiation for gradients and high-order derivatives given user-supplied expressions or generic functions. Accepts a subset of valid Julia syntax, including intermediate assignments.
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding: 10px 10px">
-              <a href="https://github.com/lbenet/TaylorSeries.jl"><strong>TaylorSeries</strong></a><br>
-              <a href="http://pkg.julialang.org/?pkg=TaylorSeries&ver=0.5">
-                <img src="http://pkg.julialang.org/badges/TaylorSeries_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
-              </a>
-            </td>
-            <td>
-              Implements truncated multivariate power series for high-order integration of ODEs and forward-mode automatic differentiation of arbitrary order derivatives via operator overloading.
-            </td>
-          </tr>
-        </table>
-        
         <h3>Related packages</h3>
 
         <p>These Julia packages also provide differentiation functionalities.</p>
@@ -178,18 +191,6 @@
 
           <tr>
             <td style="padding: 10px 10px">
-              <a href="https://github.com/LaurenceA/ReverseDiffOverload.jl"><strong>ReverseDiffOverload</strong></a><br>
-              <a href="http://pkg.julialang.org/?pkg=ReverseDiffOverload&ver=0.5">
-                <img src="http://pkg.julialang.org/badges/ReverseDiffOverload_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
-              </a>
-            </td>
-            <td>
-              Implements reverse-mode automatic differentiation by overloading function inputs to extract scalar and vector-valued expression graphs.
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding: 10px 10px">
               <a href="https://github.com/mlubin/ReverseDiffSparse.jl"><strong>ReverseDiffSparse</strong></a><br>
               <a href="http://pkg.julialang.org/?pkg=ReverseDiffSparse&ver=0.5">
                 <img src="http://pkg.julialang.org/badges/ReverseDiffSparse_0.5.svg" alt="Release testing status" style="margin-top: 2px;">
@@ -199,7 +200,7 @@
               Implements reverse-mode automatic differentiation for gradients and sparse Hessian matrices given closed-form expressions.
             </td>
           </tr>
-          
+
           <tr>
             <td style="padding: 10px 10px">
               <a href="https://github.com/symengine/SymEngine.jl"><strong>SymEngine</strong></a><br>
@@ -214,16 +215,16 @@
         </table>
 
     <h3>How are they being used?</h3>
-    <p>Packages implementing automatic differentiation techniques are already in use in the broader Julia ecosystem.</p>
+    <p>Packages implementing automatic differentiation techniques are already in use in the broader Julia ecosystem:</p>
 
     <ul>
-        <li><a href="https://github.com/JuliaOpt/Optim.jl">Optim</a> and <a href="https://github.com/EconForge/NLsolve.jl">NLSolve</a> use <strong>DualNumbers</strong> to compute exact gradients and Jacobians of user-provided functions. Just set <code>autodiff=true</code>. The function must be written to take a generic input vector, e.g., <code>f{T}(x::Vector{T})</code> or just <code>f(x)</code> instead of <code>f(x::Vector{Float64})</code>.</li>
-        <li><a href="https://github.com/JuliaOpt/JuMP.jl">JuMP</a> uses <strong>ReverseDiffSparse</strong> to compute gradients and sparse Hessians, providing them to efficient interior-point solvers.</li>
-        <li><a href="https://github.com/JuliaStats/Lora.jl">Lora</a>, an MCMC engine, uses <strong>ReverseDiffSource</strong> to compute gradients of statistical models.</li>
+        <li><a href="https://github.com/JuliaOpt/Optim.jl">Optim</a> and <a href="https://github.com/EconForge/NLsolve.jl">NLsolve</a> use <strong>ForwardDiff</strong> to compute exact gradients and Jacobians of user-provided functions. Refer to each package's documentation to enable AD.</li>
+        <li><a href="https://github.com/JuliaOpt/JuMP.jl">JuMP</a> uses <strong>ReverseDiffSparse</strong> and <strong>ForwardDiff</strong> to compute gradients and sparse Hessians, providing them to efficient interior-point solvers.</li>
+        <li><a href="https://github.com/JuliaStats/Klara.jl">Klara</a>, an MCMC engine, uses <strong>ForwardDiff</strong> and <strong>ReverseDiffSource</strong> to compute gradients of statistical models.</li>
     </ul>
 
     <h2>Links</h2>
-    <p>Discussions on JuliaDiff and its uses may be directed to the <a href="https://groups.google.com/forum/#!forum/julia-users">julia-users</a> or <a href="https://groups.google.com/forum/#!forum/julia-opt">julia-opt</a> mailing lists. The <a href="http://www.autodiff.org/">autodiff.org</a> site serves as a portal for the academic community. For a well-written simple introduction to reverse-mode automatic differentiation, see Justin Domke's <a href="http://justindomke.wordpress.com/2009/03/24/a-simple-explanation-of-reverse-mode-automatic-differentiation/">blog post</a>. Finally, automatic differentiation techniques have been implemented in a variety of languages. If you would prefer not to use Julia, see the <a href="http://en.wikipedia.org/wiki/Automatic_differentiation">wikipedia page</a> for a comprehensive list of available packages.
+    <p>Discussions on JuliaDiff and its uses may be directed to the <a href="https://discourse.julialang.org/">Julia Discourse forum</a> or the <a href="https://groups.google.com/forum/#!forum/julia-opt">julia-opt</a> mailing list. The site <a href="http://www.autodiff.org/">autodiff.org</a> serves as a portal for the academic community. For a well-written simple introduction to reverse-mode automatic differentiation, see Justin Domke's <a href="http://justindomke.wordpress.com/2009/03/24/a-simple-explanation-of-reverse-mode-automatic-differentiation/">blog post</a>. Finally, automatic differentiation techniques have been implemented in a variety of languages. If you would prefer not to use Julia, see the <a href="http://en.wikipedia.org/wiki/Automatic_differentiation">wikipedia page</a> for a comprehensive list of available packages.
 </div>
 
 <div class="sixteen columns">
