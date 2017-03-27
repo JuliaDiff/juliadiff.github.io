@@ -220,7 +220,7 @@
     <ul>
         <li><a href="https://github.com/JuliaOpt/Optim.jl">Optim</a> and <a href="https://github.com/EconForge/NLsolve.jl">NLsolve</a> use <strong>ForwardDiff</strong> to compute exact gradients and Jacobians of user-provided functions. Refer to each package's documentation to enable AD.</li>
         <li><a href="https://github.com/JuliaOpt/JuMP.jl">JuMP</a> uses <strong>ReverseDiffSparse</strong> and <strong>ForwardDiff</strong> to compute gradients and sparse Hessians, providing them to efficient interior-point solvers.</li>
-        <li><a href="https://github.com/JuliaStats/Klara.jl">Klara</a>, an MCMC engine, uses <strong>ForwardDiff</strong> and <strong>ReverseDiffSource</strong> to compute gradients of statistical models.</li>
+        <li><a href="https://github.com/JuliaStats/Klara.jl">Klara</a>, an MCMC engine, uses <strong>ForwardDiff</strong> and <strong>ReverseDiff</strong> to compute gradients and Hessians of (possibly unnormalized) target distributions.</li>
     </ul>
 
     <h2>Links</h2>
