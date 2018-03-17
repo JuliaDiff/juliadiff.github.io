@@ -176,6 +176,19 @@
               Provides methods for symbolic differentiation and finite-difference approximations.
             </td>
           </tr>
+	
+	  <tr>
+            <td style="padding: 10px 10px">
+              <a href="https://github.com/JuliaOpt/JuMP.jl"><strong>JuMP</strong></a><br>
+              <a href="http://pkg.julialang.org/?pkg=JuMP&ver=0.6">
+                <img src="http://pkg.julialang.org/badges/JuMP_0.6.svg" alt="Release testing status" style="margin-top: 2px;">
+              </a>
+            </td>
+            <td>
+              An algebraic modeling language for optimization with an internal implementation of reverse-mode automatic differentiation for gradients and sparse Hessian matrices given closed-form expressions.
+	      Includes support for automatic differentiation of user-provided functions.    
+            </td>
+          </tr>
 
           <tr>
             <td style="padding: 10px 10px">
@@ -186,18 +199,6 @@
             </td>
             <td>
               Implements truncated power series type which can be used for forward-mode automatic differentiation of arbitrary order derivatives via operator overloading.
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding: 10px 10px">
-              <a href="https://github.com/mlubin/ReverseDiffSparse.jl"><strong>ReverseDiffSparse</strong></a><br>
-              <a href="http://pkg.julialang.org/?pkg=ReverseDiffSparse&ver=0.6">
-                <img src="http://pkg.julialang.org/badges/ReverseDiffSparse_0.6.svg" alt="Release testing status" style="margin-top: 2px;">
-              </a>
-            </td>
-            <td>
-              Implements reverse-mode automatic differentiation for gradients and sparse Hessian matrices given closed-form expressions.
             </td>
           </tr>
 
@@ -219,7 +220,6 @@
 
     <ul>
         <li><a href="https://github.com/JuliaOpt/Optim.jl">Optim</a> and <a href="https://github.com/EconForge/NLsolve.jl">NLsolve</a> use <strong>ForwardDiff</strong> to compute exact gradients and Jacobians of user-provided functions. Refer to each package's documentation to enable AD.</li>
-        <li><a href="https://github.com/JuliaOpt/JuMP.jl">JuMP</a> uses <strong>ReverseDiffSparse</strong> and <strong>ForwardDiff</strong> to compute gradients and sparse Hessians, providing them to efficient interior-point solvers.</li>
         <li><a href="https://github.com/JuliaStats/Klara.jl">Klara</a>, an MCMC engine, uses <strong>ForwardDiff</strong> and <strong>ReverseDiff</strong> to compute gradients and Hessians of (possibly unnormalized) target distributions.</li>
     </ul>
 
