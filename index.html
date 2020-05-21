@@ -23,7 +23,7 @@
 	================================================== -->
     <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
 <script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -49,8 +49,8 @@
     <div class="sixteen columns">
       <h1 class="remove-bottom" style="margin-top: 40px; color: #ad3f39;">JuliaDiff</h1>
       <h5>
-        Differentiation tools in <a href="http://julialang.org">Julia</a>.
-        <a href="http://github.com/JuliaDiff/">JuliaDiff on GitHub.</a>
+        Differentiation tools in <a href="https://julialang.org">Julia</a>.
+        <a href="https://github.com/JuliaDiff/">JuliaDiff on GitHub.</a>
       </h5>
       <hr />
     </div>
@@ -65,10 +65,10 @@
         </p>
 
         <h4>What can we do instead?</h4>
-        <p>One option is to explicitly write down a function which computes the exact derivatives by using the rules that we know from Calculus. However, this quickly becomes an error-prone and tedious exercise. <strong>There is another way!</strong> The field of <a href="http://en.wikipedia.org/wiki/Automatic_differentiation">automatic differentiation</a> provides methods for automatically computing <em>exact</em> derivatives (up to floating-point error) given only the function \( f \) itself. Some methods use many fewer evaluations of \( f \) than would be required when using finite differences. In the best case, <strong>the exact gradient of \( f \) can be evaluated for the cost of \( O(1) \) evaluations of \( f \) itself</strong>.  The caveat is that \( f \) cannot be considered a black box; instead, we require either access to the source code of \( f \) or a way to plug in a special type of number using operator overloading.  </p>
+        <p>One option is to explicitly write down a function which computes the exact derivatives by using the rules that we know from Calculus. However, this quickly becomes an error-prone and tedious exercise. <strong>There is another way!</strong> The field of <a href="https://en.wikipedia.org/wiki/Automatic_differentiation">automatic differentiation</a> provides methods for automatically computing <em>exact</em> derivatives (up to floating-point error) given only the function \( f \) itself. Some methods use many fewer evaluations of \( f \) than would be required when using finite differences. In the best case, <strong>the exact gradient of \( f \) can be evaluated for the cost of \( O(1) \) evaluations of \( f \) itself</strong>.  The caveat is that \( f \) cannot be considered a black box; instead, we require either access to the source code of \( f \) or a way to plug in a special type of number using operator overloading.  </p>
 
         <h2> What is JuliaDiff? </h2>
-        <p> JuliaDiff is an informal organization which aims to unify and document packages written in <a href="http://julialang.org">Julia</a> for evaluating derivatives. The technical features of Julia, namely, multiple dispatch, source code via reflection, JIT compilation, and first-class access to expression parsing make implementing and using techniques from automatic differentiation easier than ever before (in our biased opinion). Packages hosted under the JuliaDiff organization follow the same guidelines as for <a href="http://juliaopt.org/">JuliaOpt</a>; namely, they should be actively maintained, well documented and have a basic testing suite.</p>
+        <p> JuliaDiff is an informal organization which aims to unify and document packages written in <a href="https://julialang.org">Julia</a> for evaluating derivatives. The technical features of Julia, namely, multiple dispatch, source code via reflection, JIT compilation, and first-class access to expression parsing make implementing and using techniques from automatic differentiation easier than ever before (in our biased opinion). Packages hosted under the JuliaDiff organization follow the same guidelines as for <a href="http://juliaopt.org/">JuliaOpt</a>; namely, they should be actively maintained, well documented and have a basic testing suite.</p>
 
         <h3>Included packages</h3>
         <p>Below we list the packages that are currently included in the JuliaDiff organization and their testing status on the latest Julia release, if available.</p>
