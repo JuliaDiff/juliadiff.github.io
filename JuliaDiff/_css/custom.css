@@ -1,0 +1,23 @@
+.topmatter {
+  padding-bottom: 0rem;
+  border-bottom: 3px double lightgrey;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.topmatter h1{
+  padding-bottom: 0.0em;
+  border-bottom: none;
+  margin-top: 0em;
+  margin-bottom: 0em;
+
+  color: #ad3f39;
+  font-size: 46px;
+  line-height: 50px;
+}
+
+.topmatter p{
+  padding-left: 0.5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
