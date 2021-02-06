@@ -22,62 +22,64 @@ JuliaDiff is an informal organization which aims to unify and document packages 
 
 
 ## The Big List
-This is a big list of Julia AutoDiff packages and related tooling.
+This is a big list of Julia Automatic Differentiaion (AD) packages and related tooling.
 As you can see there is a lot going on here.
 As with any such big lists it rapidly becomes out-dated.
-When (not if) you notice something that is out of date, or just plain wrong, please [submit a PR](https://github.com/JuliaDiff/juliadiff.github.io).
+When you notice something that is out of date, or just plain wrong, please [submit a PR](https://github.com/JuliaDiff/juliadiff.github.io).
 
 This list aims to be comprehensive in coverage.
 By necessity, this means it is not comprehensive in detail.
 It is worth investigating each package yourself to really understand its ins and outs, and pros and cons of its competitors.
 
-### Reverse Mode:
-- [ReverseDiff.jl](https://github.com/JuliaDiff/ReverseDiff.jl): Operator overloading AD. Very-well established.
-- [Nabla.jl](https://github.com/invenia/Nabla.jl/): Operator overloading reverse-mode AD. Primarily used are in (it's maintainer) Invenia's systems. 
-- [Tracker.jl](https://github.com/FluxML/Tracker.jl): Operator overloading reverse-mode AD. Most well-known for no longer being [Flux's](https://github.com/FluxML/Flux.jl) AD. But still used in several places about the ecosystem.
-- [AutoGrad.jl](https://github.com/denizyuret/AutoGrad.jl): Originally a port of the python AutoGrad package. Primarily used in [Knet](https://github.com/denizyuret/Knet.jl/).
+### Reverse-mode
+- [ReverseDiff.jl](https://github.com/JuliaDiff/ReverseDiff.jl): Operator overloading reverse-mode AD. Very well-established.
+- [Nabla.jl](https://github.com/invenia/Nabla.jl/): Operator overloading reverse-mode AD. Used in (its maintainer) Invenia's systems. 
+- [Tracker.jl](https://github.com/FluxML/Tracker.jl): Operator overloading reverse-mode AD. Most well-known for having been the AD used in earlier versions of the machine learning package [Flux.jl](https://github.com/FluxML/Flux.jl). No longer used by Flux.jl, but still used in several places in the Julia ecosystem.
+- [AutoGrad.jl](https://github.com/denizyuret/AutoGrad.jl): Operator overloading reverse-mode AD. Originally a port of the [Python Autograd package](https://github.com/HIPS/autograd). Primarily used in [Knet.jl](https://github.com/denizyuret/Knet.jl/).
 
-- [Zygote.jl](https://github.com/FluxML/Zygote.jl): IR-level source to source reverse-mode AD. Very widely used. Particularly notable for use in [Flux](https://github.com/FluxML/Flux.jl). Also features a secret experimental source to source forwards mode AD.
+- [Zygote.jl](https://github.com/FluxML/Zygote.jl): IR-level source to source reverse-mode AD. Very widely used. Particularly notable for being the AD used by [Flux.jl](https://github.com/FluxML/Flux.jl). Also features a secret experimental source to source forward-mode AD.
 - [Yota.jl](https://github.com/dfdx/Yota.jl): IR-level source to source reverse-mode AD.
-- [XGrad.jl](https://github.com/dfdx/XGrad.jl): AST level source to source reverse-mode AD. Not currently in active development.
+- [XGrad.jl](https://github.com/dfdx/XGrad.jl): AST-level source to source reverse-mode AD. Not currently in active development.
 - [ReversePropagation.jl](https://github.com/dpsanders/ReversePropagation.jl): Scalar, tracing-based source to source reverse-mode AD.
 - [Enzyme.jl](https://github.com/wsmoses/Enzyme.jl): Scalar, LLVM source to source reverse-mode AD. Experimental.
 
 
-### Forward mode
-- [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl): scalar operator overloading forward-mode AD. Very stable. Very well-established.
-- [ForwardDiff2](https://github.com/YingboMa//ForwardDiff2.jl): experimental non-scalar hybrid operator-overloading/source-to-source forward-mode AD. Not currently in development.
+### Forward-mode
+- [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl): Scalar, operator overloading forward-mode AD. Very stable. Very well-established.
+- [ForwardDiff2](https://github.com/YingboMa//ForwardDiff2.jl): Experimental, non-scalar hybrid operator-overloading/source-to-source forward-mode AD. Not currently in development.
 
 ### Symbolic:
-- [ModelingToolKit.jl](https://github.com/JuliaDiffEq/ModelingToolkit.jl): A pure Julia computer algebra system. While its docs focus on some particular domain use-case it is a fully general purpose system.
+- [ModelingToolKit.jl](https://github.com/JuliaDiffEq/ModelingToolkit.jl): A pure Julia [computer algebra system](https://en.wikipedia.org/wiki/Computer_algebra_system). While its docs focus on some particular domain use-case it is a fully general purpose system.
 
 ### Exotic
-- [TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl) computes polynomial expansions; which is the generalization of forward-mode AD to n-th order derivatives.
-- [NiLang.jl](https://github.com/GiggleLiu/NiLang.jl): Reversible computing DSL, where everything is differentiable, by reversing.
+- [TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl): Computes polynomial expansions; which is the generalization of forward-mode AD to nth-order derivatives.
+- [NiLang.jl](https://github.com/GiggleLiu/NiLang.jl): [Reversible computing](https://en.wikipedia.org/wiki/Reversible_computing) [DSL](https://en.wikipedia.org/wiki/Domain-specific_language), where everything is differentiable by reversing.
 
 ### Finite Differencing
-(yes, we said at the start to stop approximating deriviatives, but these packages are faster and more accurate than you would expect finite differencing to every achieve.)
+Yes, we said at the start to stop approximating deriviatives, but these packages are faster and more accurate than you would expect finite differencing to every achieve. 
+If you really need finite differencing, use these packages rather than implementing your own.
 
-- [FiniteDifferences.jl](https://github.com/JuliaDiff/FiniteDifferences.jl): High-accuracy finite differencing with support for almost any type (not just the usual arrays and numbers)
-- [FiniteDiff](https://github.com/JuliaDiff/FiniteDiff.jl): High-accuracy finite differencing with support for efficient calculation of spares Jacobians via coloring vectors.
-- [Calculus.jl](https://github.com/JuliaMath/Calculus.jl): Largely deprecated, legacy package. New users should look to FiniteDifferences and FiniteDiff instead.
+- [FiniteDifferences.jl](https://github.com/JuliaDiff/FiniteDifferences.jl): High-accuracy finite differencing with support for almost any type (not just arrays and numbers).
+- [FiniteDiff.jl](https://github.com/JuliaDiff/FiniteDiff.jl): High-accuracy finite differencing with support for efficient calculation of spares Jacobians via coloring vectors.
+- [Calculus.jl](https://github.com/JuliaMath/Calculus.jl): Largely deprecated, legacy package. New users should look to FiniteDifferences.jl and FiniteDiff.jl instead.
 
-### Rulesets:
-- [ChainRules.jl](https://www.juliadiff.org/ChainRulesCore.jl/stable/): extensible AD independent rule-set.
+### Rulesets
+Packages providing collections of derivatives of functions which can be used in AD packages.
+- [ChainRules](https://www.juliadiff.org/ChainRulesCore.jl/stable/): Extensible, AD-independent rules.
   - [ChainRulesCore.jl](https://github.com/JuliaDiff/ChainRulesCore.jl): Core API for user to extend to add rules to their package.
-  - [ChainRules.jl](https://github.com/JuliaDiff/ChainRules.jl/): the rules for Base and other standard libraries.
-  - [ChainRulesTestUtils.jl](https://github.com/JuliaDiff/ChainRulesTestUtils.jl/): testing tools to check rules defined with ChainRulesCore.
-- [DiffRules.jl](https://github.com/JuliaDiff/ChainRulesCore.jl): Original multi-AD system rule-set. Largely deprecated in-favor of ChainRules.
-- [ZygoteRules.jl](https://github.com/FluxML/ZygoteRules.jl/blob/master/src/ZygoteRules.jl): for adding rules to Zygote. Largely deprecated in-favour of ChainRules.
+  - [ChainRules.jl](https://github.com/JuliaDiff/ChainRules.jl/): Rules for Julia Base and standard libraries.
+  - [ChainRulesTestUtils.jl](https://github.com/JuliaDiff/ChainRulesTestUtils.jl/): Tools for testing rules defined with ChainRulesCore.jl.
+- [DiffRules.jl](https://github.com/JuliaDiff/ChainRulesCore.jl): An earlier set of AD-independent rules. Largely deprecated in favor of the more extensible ChainRules.jl.
+- [ZygoteRules.jl](https://github.com/FluxML/ZygoteRules.jl/blob/master/src/ZygoteRules.jl): For defining Zygote.jl specific rules. Largely deprecated in favour of the AD-independent ChainRules.jl.
 
 ### Sparsity
-- [SparsityDetection.jl](https://github.com/SciML/SparsityDetection.jl): automatic Jacobian and Hessian sparsity pattern detection.
-- [SparseDiffTools.jl](https://github.com/JuliaDiff/SparseDiffTools.jl): exploiting sparsity to speed up FiniteDiff and ForwardDiff; as well as other algorithms.
+- [SparsityDetection.jl](https://github.com/SciML/SparsityDetection.jl): Automatic Jacobian and Hessian sparsity pattern detection.
+- [SparseDiffTools.jl](https://github.com/JuliaDiff/SparseDiffTools.jl): Exploiting sparsity to speed up FiniteDiff.jl and ForwardDiff.jl, as well as other algorithms.
 
 
 ## Links for discussion and more information
 Discussions on JuliaDiff and its uses may be directed to the [Julia Discourse forum](https://discourse.julialang.org/)
 The [autodiff.org](http://www.autodiff.org/) site serves as a portal for the academic community, though it is often out-of-date.
-The ChainRules project maintains a [list of recommend-reading/watching](https://www.juliadiff.org/ChainRulesCore.jl/stable/FAQ.html#Where-can-I-learn-more-about-AD-?) for those after more information.
+The ChainRules project maintains a [list of recommend reading/watching](https://www.juliadiff.org/ChainRulesCore.jl/stable/FAQ.html#Where-can-I-learn-more-about-AD-?) for those after more information.
 Finally, automatic differentiation techniques have been implemented in a variety of languages.
-If you would prefer not to use Julia, see the [wikipedia page](http://en.wikipedia.org/wiki/Automatic_differentiation") for a comprehensive list of available packages.
+If you would prefer not to use Julia, see the [wikipedia page](http://en.wikipedia.org/wiki/Automatic_differentiation) for a comprehensive list of available packages.
