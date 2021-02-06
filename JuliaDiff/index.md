@@ -58,7 +58,8 @@ It is worth investigating each package yourself to really understand its ins and
 ### Finite Differencing
 (yes, we said at the start to stop approximating deriviatives, but these packages are faster and more accurate than you would expect finite differencing to every achieve.)
 
-- [FiniteDifferences.jl](https://github.com/JuliaDiff/FiniteDifferences.jl): High-accuracy finite differencing with support for almost any type (not just the usual arrays and numbers): [FiniteDiff](https://github.com/JuliaDiff/FiniteDiff.jl): High-accuracy finite differencing with support for efficient calculation of spares Jacobians via coloring vectors.
+- [FiniteDifferences.jl](https://github.com/JuliaDiff/FiniteDifferences.jl): High-accuracy finite differencing with support for almost any type (not just the usual arrays and numbers)
+- [FiniteDiff](https://github.com/JuliaDiff/FiniteDiff.jl): High-accuracy finite differencing with support for efficient calculation of spares Jacobians via coloring vectors.
 - [Calculus.jl](https://github.com/JuliaMath/Calculus.jl): Largely deprecated, legacy package. New users should look to FiniteDifferences and FiniteDiff instead.
 
 ### Rulesets:
@@ -80,4 +81,3 @@ The [autodiff.org](http://www.autodiff.org/) site serves as a portal for the aca
 The ChainRules project maintains a [list of recommend-reading/watching](https://www.juliadiff.org/ChainRulesCore.jl/stable/FAQ.html#Where-can-I-learn-more-about-AD-?) for those after more information.
 Finally, automatic differentiation techniques have been implemented in a variety of languages.
 If you would prefer not to use Julia, see the [wikipedia page](http://en.wikipedia.org/wiki/Automatic_differentiation") for a comprehensive list of available packages.
-
