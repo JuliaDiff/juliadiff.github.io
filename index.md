@@ -22,7 +22,7 @@ JuliaDiff is an informal organization which aims to unify and document packages 
 
 
 ## The Big List
-This is a big list of Julia Automatic Differentiaion (AD) packages and related tooling.
+This is a big list of Julia Automatic Differentiation (AD) packages and related tooling.
 As you can see there is a lot going on here.
 As with any such big lists it rapidly becomes out-dated.
 When you notice something that is out of date, or just plain wrong, please [submit a PR](https://github.com/JuliaDiff/juliadiff.github.io).
@@ -56,11 +56,11 @@ It is worth investigating each package yourself to really understand its ins and
 - [NiLang.jl](https://github.com/GiggleLiu/NiLang.jl): [Reversible computing](https://en.wikipedia.org/wiki/Reversible_computing) [DSL](https://en.wikipedia.org/wiki/Domain-specific_language), where everything is differentiable by reversing.
 
 ### Finite Differencing
-Yes, we said at the start to stop approximating deriviatives, but these packages are faster and more accurate than you would expect finite differencing to every achieve. 
+Yes, we said at the start to stop approximating derivatives, but these packages are faster and more accurate than you would expect finite differencing to ever achieve. 
 If you really need finite differencing, use these packages rather than implementing your own.
 
 - [FiniteDifferences.jl](https://github.com/JuliaDiff/FiniteDifferences.jl): High-accuracy finite differencing with support for almost any type (not just arrays and numbers).
-- [FiniteDiff.jl](https://github.com/JuliaDiff/FiniteDiff.jl): High-accuracy finite differencing with support for efficient calculation of spares Jacobians via coloring vectors.
+- [FiniteDiff.jl](https://github.com/JuliaDiff/FiniteDiff.jl): High-accuracy finite differencing with support for efficient calculation of sparse Jacobians via coloring vectors.
 - [Calculus.jl](https://github.com/JuliaMath/Calculus.jl): Largely deprecated, legacy package. New users should look to FiniteDifferences.jl and FiniteDiff.jl instead.
 
 ### Rulesets
