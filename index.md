@@ -56,7 +56,7 @@ It is worth investigating each package yourself to really understand its ins and
 - [NiLang.jl](https://github.com/GiggleLiu/NiLang.jl): [Reversible computing](https://en.wikipedia.org/wiki/Reversible_computing) [DSL](https://en.wikipedia.org/wiki/Domain-specific_language), where everything is differentiable by reversing.
 
 ### Finite Differencing
-Yes, we said at the start to stop approximating deriviatives, but these packages are faster and more accurate than you would expect finite differencing to every achieve. 
+Yes, we said at the start to stop approximating deriviatives, but these packages are faster and more accurate than you would expect finite differencing to ever achieve. 
 If you really need finite differencing, use these packages rather than implementing your own.
 
 - [FiniteDifferences.jl](https://github.com/JuliaDiff/FiniteDifferences.jl): High-accuracy finite differencing with support for almost any type (not just arrays and numbers).
