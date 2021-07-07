@@ -69,8 +69,8 @@ Packages providing collections of derivatives of functions which can be used in 
   - [ChainRulesCore.jl](https://github.com/JuliaDiff/ChainRulesCore.jl): Core API for user to extend to add rules to their package.
   - [ChainRules.jl](https://github.com/JuliaDiff/ChainRules.jl/): Rules for Julia Base and standard libraries.
   - [ChainRulesTestUtils.jl](https://github.com/JuliaDiff/ChainRulesTestUtils.jl/): Tools for testing rules defined with ChainRulesCore.jl.
-- [DiffRules.jl](https://github.com/JuliaDiff/ChainRulesCore.jl): An earlier set of AD-independent rules. Largely deprecated in favor of the more extensible ChainRules.jl.
-- [ZygoteRules.jl](https://github.com/FluxML/ZygoteRules.jl/blob/master/src/ZygoteRules.jl): For defining Zygote.jl specific rules. Largely deprecated in favour of the AD-independent ChainRules.jl.
+- [DiffRules.jl](https://github.com/JuliaDiff/DiffRules.jl): An earlier set of AD-independent rules, for scalar functions. Used as the primary source for ForwardDiff.jl, and in part by other packages.
+- [ZygoteRules.jl](https://github.com/FluxML/ZygoteRules.jl): Lightweight package for defining rules for Zygote.jl. Largely deprecated in favour of the AD-independent ChainRulesCore.jl.
 
 ### Sparsity
 - [SparsityDetection.jl](https://github.com/SciML/SparsityDetection.jl): Automatic Jacobian and Hessian sparsity pattern detection.
