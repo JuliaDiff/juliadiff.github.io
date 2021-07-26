@@ -49,7 +49,7 @@ It is worth investigating each package yourself to really understand its ins and
 - [ForwardDiff2](https://github.com/YingboMa//ForwardDiff2.jl): Experimental, non-scalar hybrid operator-overloading/source-to-source forward-mode AD. Not currently in development.
 
 ### Symbolic:
-- [ModelingToolKit.jl](https://github.com/JuliaDiffEq/ModelingToolkit.jl): A pure Julia [computer algebra system](https://en.wikipedia.org/wiki/Computer_algebra_system). While its docs focus on some particular domain use-case it is a fully general purpose system.
+- [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl): A pure Julia [computer algebra system](https://en.wikipedia.org/wiki/Computer_algebra_system). While its docs focus on some particular domain use-case it is a fully general purpose system.
 
 ### Exotic
 - [TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl): Computes polynomial expansions; which is the generalization of forward-mode AD to nth-order derivatives.
