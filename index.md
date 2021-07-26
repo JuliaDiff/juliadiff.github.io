@@ -42,7 +42,7 @@ It is worth investigating each package yourself to really understand its ins and
 - [XGrad.jl](https://github.com/dfdx/XGrad.jl): AST-level source to source reverse-mode AD. Not currently in active development.
 - [ReversePropagation.jl](https://github.com/dpsanders/ReversePropagation.jl): Scalar, tracing-based source to source reverse-mode AD.
 - [Enzyme.jl](https://github.com/wsmoses/Enzyme.jl): Scalar, LLVM source to source reverse-mode AD. Experimental.
-
+- [Diffractor.jl](https://github.com/JuliaDiff/Diffractor.jl): Next-gen IR-level source to source reverse-mode (and forward-mode) AD. In development.
 
 ### Forward-mode
 - [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl): Scalar, operator overloading forward-mode AD. Very stable. Very well-established.
