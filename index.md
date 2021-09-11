@@ -47,6 +47,7 @@ It is worth investigating each package yourself to really understand its ins and
 ### Forward-mode
 - [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl): Scalar, operator overloading forward-mode AD. Very stable. Very well-established.
 - [ForwardDiff2](https://github.com/YingboMa//ForwardDiff2.jl): Experimental, non-scalar hybrid operator-overloading/source-to-source forward-mode AD. Not currently in development.
+- [Diffractor.jl](https://github.com/JuliaDiff/Diffractor.jl): Next-gen IR-level source to source forward-mode (and reverse-mode) AD. In development.
 
 ### Symbolic:
 - [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl): A pure Julia [computer algebra system](https://en.wikipedia.org/wiki/Computer_algebra_system). While its docs focus on some particular domain use-case it is a fully general purpose system.
