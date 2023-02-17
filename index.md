@@ -77,6 +77,8 @@ Packages providing collections of derivatives of functions which can be used in 
 - [SparsityDetection.jl](https://github.com/SciML/SparsityDetection.jl): Automatic Jacobian and Hessian sparsity pattern detection.
 - [SparseDiffTools.jl](https://github.com/JuliaDiff/SparseDiffTools.jl): Exploiting sparsity to speed up FiniteDiff.jl and ForwardDiff.jl, as well as other algorithms.
 
+### Interface
+- [AbstractDifferentiation.jl](https://github.com/JuliaDiff/AbstractDifferentiation.jl): AD backend-agnostic interface for algorithms that rely on derivatives, gradients, Jacobians, Hessians, etc.
 
 ## Links for discussion and more information
 Discussions on JuliaDiff and its uses may be directed to the [Julia Discourse forum](https://discourse.julialang.org/)
