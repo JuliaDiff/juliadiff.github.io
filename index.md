@@ -55,6 +55,7 @@ It is worth investigating each package yourself to really understand its ins and
 ### Exotic
 - [TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl): Computes polynomial expansions; which is the generalization of forward-mode AD to nth-order derivatives.
 - [NiLang.jl](https://github.com/GiggleLiu/NiLang.jl): [Reversible computing](https://en.wikipedia.org/wiki/Reversible_computing) [DSL](https://en.wikipedia.org/wiki/Domain-specific_language), where everything is differentiable by reversing.
+- [TaylorDiff.jl](https://github.com/JuliaDiff/TaylorDiff.jl): an efficient, linear-scaling implementation for higher-order directional derivatives, implemented with operator-overloading on statically-typed Taylor polynomials. In development.
 
 ### Finite Differencing
 Yes, we said at the start to stop approximating derivatives, but these packages are faster and more accurate than you would expect finite differencing to ever achieve. 
