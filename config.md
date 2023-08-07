@@ -7,7 +7,7 @@ The website_* must be defined for the RSS to work
 @def website_descr = "Differentiation tools in Julia"
 @def website_url   = "https://www.julialang.org"
 
-@def author = "Lyndon White, Miles Lubin"
+@def author = "Frames White, Miles Lubin"
 
 @def mintoclevel = 2
 
