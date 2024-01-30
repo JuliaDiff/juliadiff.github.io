@@ -69,6 +69,7 @@ It is worth investigating each package yourself to really understand its ins and
 
 - [JuliaDiff/TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl): Taylor polynomial expansions in one or more variables
 - [JuliaDiff/TaylorDiff.jl](https://github.com/JuliaDiff/TaylorDiff.jl): Higher order directional derivatives (experimental)
+- [JuliaDiff/Diffractor.jl](https://github.com/JuliaDiff/Diffractor.jl): Source transformation AD backend (experimental)
 
 ### Rulesets
 
