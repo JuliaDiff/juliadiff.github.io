@@ -96,7 +96,6 @@ These packages define derivatives for basic functions, and enable users to do th
 Some complex algorithms are not natively differentiable, which is why derivatives have been implemented in the following packages:
 
 - [SciML](https://github.com/SciML): For a lot of different domains of scientific machine learning: differential equations, linear and nonlinear systems, optimization problems, etc.
-- [TuringLang/DistributionsAD.jl](https://github.com/TuringLang/DistributionsAD.jl): For probability distributions
 - [gdalle/ImplicitDifferentiation.jl](https://github.com/gdalle/ImplicitDifferentiation.jl): For generic algorithms specified by output conditions, thanks to the implicit function theorem
 - [jump-dev/DiffOpt.jl](https://github.com/jump-dev/DiffOpt.jl): For convex optimization problems
 - [axelparmentier/InferOpt.jl](https://github.com/axelparmentier/InferOpt.jl): For combinatorial optimization problems
