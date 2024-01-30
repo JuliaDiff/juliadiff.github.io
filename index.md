@@ -79,7 +79,7 @@ These packages define derivatives for basic functions, and enable users to do th
   - [JuliaDiff/ChainRules.jl](https://github.com/JuliaDiff/ChainRules.jl/): Rules for Julia Base and standard libraries.
   - [JuliaDiff/ChainRulesTestUtils.jl](https://github.com/JuliaDiff/ChainRulesTestUtils.jl/): Tools for testing rules defined with ChainRulesCore.jl.
 - [ThummeTo/ForwardDiffChainRules.jl](https://github.com/ThummeTo/ForwardDiffChainRules.jl): Translate rules from ChainRulesCore.jl to make them compatible with ForwardDiff.jl
-- [JuliaDiff/DiffRules.jl](https://github.com/JuliaDiff/DiffRules.jl): Scalar rules used by ForwardDiff.jl, ReverseDiff.jl, and Tracker.jl
+- [JuliaDiff/DiffRules.jl](https://github.com/JuliaDiff/DiffRules.jl): Scalar rules used by e.g. ForwardDiff.jl, ReverseDiff.jl, Zygote.jl, Tracker.jl, and Symbolics.jl
 - [FluxML/ZygoteRules.jl](https://github.com/FluxML/ZygoteRules.jl): Some rules used by Zygote.jl (mostly deprecated in favor of ChainRules.jl).
 
 ### Interface
