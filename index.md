@@ -53,6 +53,7 @@ It is worth investigating each package yourself to really understand its ins and
 
 - [JuliaDiff/ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl): Operator overloading AD backend
 - [JuliaDiff/PolyesterForwardDiff.jl](https://github.com/JuliaDiff/PolyesterForwardDiff.jl): Multithreaded version of ForwardDiff.jl
+- [EnzymeAD/Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl): LLVM-level source transformation AD backend
 - [JuliaDiff/Diffractor.jl](https://github.com/JuliaDiff/Diffractor.jl): Source transformation AD backend (experimental)
 
 ### Symbolic differentiation
@@ -81,6 +82,7 @@ These packages define derivatives for basic functions, and enable users to do th
   - [JuliaDiff/ChainRulesTestUtils.jl](https://github.com/JuliaDiff/ChainRulesTestUtils.jl/): Tools for testing rules defined with ChainRulesCore.jl.
 - [ThummeTo/ForwardDiffChainRules.jl](https://github.com/ThummeTo/ForwardDiffChainRules.jl): Translate rules from ChainRulesCore.jl to make them compatible with ForwardDiff.jl
 - [JuliaDiff/DiffRules.jl](https://github.com/JuliaDiff/DiffRules.jl): Scalar rules used by e.g. ForwardDiff.jl, ReverseDiff.jl, Tracker.jl, and Symbolics.jl
+- [EnzymeAD/EnzymeRules.jl](https://enzymead.github.io/Enzyme.jl/stable/generated/custom_rule/): Rule definition API for Enzyme.jl
 - [FluxML/ZygoteRules.jl](https://github.com/FluxML/ZygoteRules.jl): Some rules used by Zygote.jl (mostly deprecated in favor of ChainRules.jl).
 
 ### Interface
