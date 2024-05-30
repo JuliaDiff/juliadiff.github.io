@@ -46,8 +46,9 @@ It is worth investigating each package yourself to really understand its ins and
 - [JuliaDiff/ReverseDiff.jl](https://github.com/JuliaDiff/ReverseDiff.jl): Operator overloading AD backend
 - [FluxML/Zygote.jl](https://github.com/FluxML/Zygote.jl): Source transformation AD backend
 - [EnzymeAD/Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl): LLVM-level source transformation AD backend
+- [FluxML/Tracker.jl](https://github.com/FluxML/Tracker.jl): Operator overloading AD backend
+- [compintell/Tapir.jl](https://github.com/compintell/Tapir.jl): Source transformation AD backend (experimental)
 - [dfdx/Yota.jl](https://github.com/dfdx/Yota.jl): Source transformation AD backend
-- [FluxML/Tracker.jl](https://github.com/FluxML/Tracker.jl): Operator overloading AD backend (mostly deprecated in favor of Zygote.jl)
 
 ### Forward mode automatic differentiation
 
@@ -72,6 +73,11 @@ It is worth investigating each package yourself to really understand its ins and
 - [JuliaDiff/TaylorDiff.jl](https://github.com/JuliaDiff/TaylorDiff.jl): Higher order directional derivatives (experimental)
 - [JuliaDiff/Diffractor.jl](https://github.com/JuliaDiff/Diffractor.jl): Source transformation AD backend (experimental)
 
+### Interfaces
+
+- [gdalle/DifferentiationInterface.jl](https://github.com/gdalle/DifferentiationInterface.jl): Generic interface for first- and second-order differentiation with any AD backend on 1-argument functions (`f(x) = y` or `f!(y, x)`).
+- [JuliaDiff/AbstractDifferentiation.jl](https://github.com/JuliaDiff/AbstractDifferentiation.jl): Generic interface for first- and second-order differentiation with a subset of AD backends on functions with more than one argument (will soon wrap DifferentiationInterface.jl).
+
 ### Rulesets
 
 These packages define derivatives for basic functions, and enable users to do the same:
@@ -85,14 +91,11 @@ These packages define derivatives for basic functions, and enable users to do th
 - [EnzymeAD/EnzymeRules.jl](https://enzymead.github.io/Enzyme.jl/stable/generated/custom_rule/): Rule definition API for Enzyme.jl
 - [FluxML/ZygoteRules.jl](https://github.com/FluxML/ZygoteRules.jl): Some rules used by Zygote.jl (mostly deprecated in favor of ChainRules.jl).
 
-### Interface
-
-- [AbstractDifferentiation.jl](https://github.com/JuliaDiff/AbstractDifferentiation.jl): Backend-agnostic interface for algorithms that rely on derivatives, gradients, Jacobians, Hessians, etc.
-
-### Exotic
+### Sparsity
 
 - [JuliaDiff/SparseDiffTools.jl](https://github.com/JuliaDiff/SparseDiffTools.jl): Exploit sparsity to speed up FiniteDiff.jl and ForwardDiff.jl, as well as other algorithms.
-- [gaurav-arya/StochasticAD.jl](https://github.com/gaurav-arya/StochasticAD.jl): Differentiation of functions with stochastic behavior (experimental)
+- [adrhill/SparseConnectivityTracer.jl](https://github.com/adrhill/SparseConnectivityTracer.jl): Sparsity pattern detection for Jacobians and Hessians.
+- [gdalle/SparseMatrixColorings.jl](https://github.com/gdalle/SparseMatrixColorings.jl): Efficient coloring and and decompression algorithms for sparse Jacobians and Hessians.
 
 ### Differentiating through more stuff
 
@@ -102,6 +105,7 @@ Some complex algorithms are not natively differentiable, which is why derivative
 - [gdalle/ImplicitDifferentiation.jl](https://github.com/gdalle/ImplicitDifferentiation.jl): For generic algorithms specified by output conditions, thanks to the implicit function theorem
 - [jump-dev/DiffOpt.jl](https://github.com/jump-dev/DiffOpt.jl): For convex optimization problems
 - [axelparmentier/InferOpt.jl](https://github.com/axelparmentier/InferOpt.jl): For combinatorial optimization problems
+- [gaurav-arya/StochasticAD.jl](https://github.com/gaurav-arya/StochasticAD.jl): Differentiation of functions with stochastic behavior (experimental)
 
 ### Inactive packages
 
