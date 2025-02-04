@@ -33,9 +33,9 @@ The [autodiff.org](http://www.autodiff.org/) site serves as a portal for the aca
 
 ## The Big List
 
-What follows is a big list of Julia differentiation packages and related tooling, last updated in January 2024.
+What follows is a big list of Julia differentiation packages and related tooling, last updated in February 2025.
 If you notice something inaccurate or outdated, please [open an issue](https://github.com/JuliaDiff/juliadiff.github.io/issues) to signal it.
-The packages marked as inactive are those which have had no release in 2023.
+The packages marked as inactive are those which have had no release since 2023.
 
 The list aims to be comprehensive in coverage.
 By necessity, this means it is not comprehensive in detail.
@@ -46,9 +46,8 @@ It is worth investigating each package yourself to really understand its ins and
 - [JuliaDiff/ReverseDiff.jl](https://github.com/JuliaDiff/ReverseDiff.jl): Operator overloading AD backend
 - [FluxML/Zygote.jl](https://github.com/FluxML/Zygote.jl): Source transformation AD backend
 - [EnzymeAD/Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl): LLVM-level source transformation AD backend
+- [compintell/Mooncake.jl](https://github.com/compintell/Mooncake.jl): Source transformation AD backend
 - [FluxML/Tracker.jl](https://github.com/FluxML/Tracker.jl): Operator overloading AD backend
-- [compintell/Tapir.jl](https://github.com/compintell/Tapir.jl): Source transformation AD backend (experimental)
-- [dfdx/Yota.jl](https://github.com/dfdx/Yota.jl): Source transformation AD backend
 
 ### Forward mode automatic differentiation
 
@@ -72,11 +71,12 @@ It is worth investigating each package yourself to really understand its ins and
 - [JuliaDiff/TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl): Taylor polynomial expansions in one or more variables
 - [JuliaDiff/TaylorDiff.jl](https://github.com/JuliaDiff/TaylorDiff.jl): Higher order directional derivatives (experimental)
 - [JuliaDiff/Diffractor.jl](https://github.com/JuliaDiff/Diffractor.jl): Source transformation AD backend (experimental)
+- [bmad-sim/GTPSA.jl](https://github.com/bmad-sim/GTPSA.jl): Truncated power series
 
 ### Interfaces
 
-- [gdalle/DifferentiationInterface.jl](https://github.com/gdalle/DifferentiationInterface.jl): Generic interface for first- and second-order differentiation with any AD backend on 1-argument functions (`f(x) = y` or `f!(y, x)`).
-- [JuliaDiff/AbstractDifferentiation.jl](https://github.com/JuliaDiff/AbstractDifferentiation.jl): Generic interface for first- and second-order differentiation with a subset of AD backends on functions with more than one argument (will soon wrap DifferentiationInterface.jl).
+- [JuliaDiff/DifferentiationInterface.jl](https://github.com/JuliaDiff/DifferentiationInterface.jl): Generic interface for first- and second-order differentiation with any AD backend, including sparsity handling.
+- [JuliaDiff/AbstractDifferentiation.jl](https://github.com/JuliaDiff/AbstractDifferentiation.jl): Generic interface for first- and second-order differentiation with a subset of AD backends (precursor to DifferentiationInterface.jl).
 
 ### Rulesets
 
@@ -93,9 +93,9 @@ These packages define derivatives for basic functions, and enable users to do th
 
 ### Sparsity
 
-- [JuliaDiff/SparseDiffTools.jl](https://github.com/JuliaDiff/SparseDiffTools.jl): Exploit sparsity to speed up FiniteDiff.jl and ForwardDiff.jl, as well as other algorithms.
 - [adrhill/SparseConnectivityTracer.jl](https://github.com/adrhill/SparseConnectivityTracer.jl): Sparsity pattern detection for Jacobians and Hessians.
 - [gdalle/SparseMatrixColorings.jl](https://github.com/gdalle/SparseMatrixColorings.jl): Efficient coloring and and decompression algorithms for sparse Jacobians and Hessians.
+- [JuliaDiff/SparseDiffTools.jl](https://github.com/JuliaDiff/SparseDiffTools.jl): Exploit sparsity to speed up FiniteDiff.jl and ForwardDiff.jl, as well as other algorithms.
 
 ### Differentiating through more stuff
 
@@ -111,6 +111,7 @@ Some complex algorithms are not natively differentiable, which is why derivative
 
 - [denizyuret/AutoGrad.jl](https://github.com/denizyuret/AutoGrad.jl)
 - [dfdx/XGrad.jl](https://github.com/dfdx/XGrad.jl)
+- [dfdx/Yota.jl](https://github.com/dfdx/Yota.jl)
 - [dpsanders/ReversePropagation.jl](https://github.com/dpsanders/ReversePropagation.jl)
 - [GiggleLiu/NiLang.jl](https://github.com/GiggleLiu/NiLang.jl)
 - [invenia/Nabla.jl](https://github.com/invenia/Nabla.jl/)
