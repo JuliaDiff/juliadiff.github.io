@@ -46,7 +46,7 @@ It is worth investigating each package yourself to really understand its ins and
 - [JuliaDiff/ReverseDiff.jl](https://github.com/JuliaDiff/ReverseDiff.jl): Operator overloading AD backend
 - [FluxML/Zygote.jl](https://github.com/FluxML/Zygote.jl): Source transformation AD backend
 - [EnzymeAD/Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl): LLVM-level source transformation AD backend
-- [compintell/Mooncake.jl](https://github.com/compintell/Mooncake.jl): Source transformation AD backend
+- [Chalk-lab/Mooncake.jl](https://github.com/chalk-lab/Mooncake.jl): Source transformation AD backend
 - [FluxML/Tracker.jl](https://github.com/FluxML/Tracker.jl): Operator overloading AD backend
 
 ### Forward mode automatic differentiation
